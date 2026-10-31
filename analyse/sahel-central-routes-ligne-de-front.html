@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Le Sahel central peut-il nourrir sa population quand les routes elles-mêmes sont devenues la ligne de front ? | Peace and Security Bridges</title>
+  <meta name="description" content="Le Sahel central fait face à une catastrophe humanitaire qui est désormais le moteur de la crise sécuritaire : la faim est déterminée par l&#x27;accès, et les routes elles-mêmes sont devenues la ligne de front."/>
+  <style>
+    :root {
+      --navy: #07182E;
+      --navy-soft: #14304F;
+      --gold: #B08D3E;
+      --gold-light: #C9A227;
+      --pale: #F3F6FA;
+      --ink: #1C2B3A;
+      --ink-dim: rgba(28, 43, 58, 0.72);
+      --white-dim: rgba(243, 246, 250, 0.75);
+      --border-footer: rgba(243, 246, 250, 0.12);
+      --shadow: 0 4px 28px rgba(7, 24, 46, 0.06);
+      --shadow-hover: 0 10px 34px rgba(7, 24, 46, 0.10);
+      --font: 'Georgia', serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #FFFFFF;
+      color: var(--ink);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a, button { cursor: pointer; }
+
+    img { max-width: 100%; }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 16px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 1px 14px rgba(7, 24, 46, 0.05);
+    }
+
+    .nav-logo { text-decoration: none; display: block; }
+
+    .nav-logo-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      display: block;
+    }
+
+    .nav-logo-rule {
+      height: 2px;
+      background: var(--gold);
+      margin-top: 5px;
+      display: block;
+    }
+
+    .nav-logo-sub {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 5px;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--navy); }
+
+    .nav-lang { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: var(--ink-dim); }
+    .nav-lang a { color: var(--ink-dim); text-decoration: none; letter-spacing: 0.12em; }
+    .nav-lang a:hover { color: var(--navy); }
+    .nav-lang .active { color: var(--gold); }
+
+    .nav-cta {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-decoration: none;
+      padding: 10px 22px;
+      border: 1px solid var(--gold);
+      transition: all 0.3s;
+    }
+
+    .nav-cta:hover { background: var(--gold); color: #FFFFFF; }
+
+    /* HERO */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 190px 60px 130px;
+      overflow: hidden;
+      background: var(--pale);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/hero-lake-kivu.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(96deg, rgba(243,246,250,0.96) 0%, rgba(243,246,250,0.86) 44%, rgba(243,246,250,0.38) 78%, rgba(243,246,250,0.18) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 34px;
+      animation: fadeInUp 0.8s ease both;
+    }
+
+    .hero-tag::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-title {
+      font-size: clamp(44px, 6vw, 78px);
+      font-weight: 400;
+      line-height: 1.08;
+      color: var(--navy);
+      margin-bottom: 30px;
+      animation: fadeInUp 0.8s 0.1s ease both;
+    }
+
+    .hero-title em { font-style: italic; color: var(--gold); }
+
+    .hero-motto {
+      font-size: clamp(21px, 2.5vw, 28px);
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.45;
+      color: var(--navy-soft);
+      margin-bottom: 22px;
+      max-width: 640px;
+      animation: fadeInUp 0.8s 0.2s ease both;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--ink-dim);
+      margin-bottom: 48px;
+      max-width: 600px;
+      animation: fadeInUp 0.8s 0.25s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s 0.3s ease both;
+    }
+
+    .btn-primary {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 16px 36px;
+      background: var(--gold);
+      border: 1px solid var(--gold);
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(176, 141, 62, 0.30);
+    }
+
+    .btn-outline {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-decoration: none;
+      padding: 16px 36px;
+      background: transparent;
+      border: 1px solid var(--navy);
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover { background: var(--navy); color: #FFFFFF; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECTION BASE */
+    section { position: relative; }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 60px;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-tag::before {
+      content: '';
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-tag.center { justify-content: center; }
+    .section-tag.center::before { display: none; }
+
+    .section-title {
+      font-size: clamp(32px, 3.8vw, 50px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    .section-lead {
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--ink-dim);
+      max-width: 760px;
+    }
+
+    /* ABOUT */
+    #about {
+      padding: 130px 0;
+      background: #FFFFFF;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--ink-dim);
+      font-size: 17px;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .about-text p strong { color: var(--navy); }
+
+    .about-facts {
+      background: var(--pale);
+      padding: 40px 38px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-facts h3 {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .about-facts dl { display: grid; gap: 18px; }
+
+    .about-facts dt {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .about-facts dd {
+      font-size: 15px;
+      color: var(--ink);
+      margin-top: 2px;
+      line-height: 1.55;
+    }
+
+    /* HOW IT WORKS */
+    #how {
+      padding: 130px 0;
+      background: var(--pale);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 56px;
+      margin-top: 64px;
+    }
+
+    .step { padding-top: 6px; }
+
+    .step-num {
+      font-size: 54px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-size: 15.5px;
+      line-height: 1.8;
+      color: var(--ink-dim);
+    }
+
+    /* FEATURES */
+    #features {
+      padding: 130px 0;
+      background: #FFFFFF;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .feature-card {
+      background: var(--pale);
+      padding: 42px 40px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .feature-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      font-size: 15.5px;
+      line-height: 1.8;
+      color: var(--ink-dim);
+    }
+
+    /* CONSULTATIONS */
+    #consultations {
+      padding: 130px 0;
+      background: var(--pale);
+      text-align: center;
+    }
+
+    #consultations .section-lead {
+      margin: 0 auto;
+    }
+
+    #consultations .section-lead + .section-lead { margin-top: 18px; }
+
+    .consult-actions { margin-top: 46px; }
+
+    /* PROGRAMS */
+    #programs {
+      padding: 130px 0;
+      background: #FFFFFF;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 60px;
+    }
+
+    .program-card {
+      background: var(--pale);
+      padding: 36px 30px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .program-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .program-num {
+      font-size: 15px;
+      font-style: italic;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .program-card h3 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .program-card p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--ink-dim);
+    }
+
+    /* WHERE WE WORK */
+    #where {
+      padding: 130px 0;
+      background: var(--pale);
+    }
+
+    .where-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      margin-top: 60px;
+    }
+
+    .where-card {
+      background: #FFFFFF;
+      padding: 34px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .where-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .where-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--ink-dim);
+    }
+
+    /* PARTNER CTA */
+    #partner {
+      padding: 120px 0;
+      background: #FFFFFF;
+      text-align: center;
+    }
+
+    #partner p {
+      color: var(--ink-dim);
+      font-size: 17px;
+      line-height: 1.85;
+      max-width: 640px;
+      margin: 0 auto 42px;
+    }
+
+    /* CONTACT */
+    #contact {
+      padding: 130px 0;
+      background: var(--pale);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 60px;
+    }
+
+    .contact-card {
+      background: #FFFFFF;
+      padding: 36px 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h3 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .contact-card p {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--ink);
+    }
+
+    .contact-card a { color: var(--navy); }
+
+    .contact-actions { margin-top: 46px; }
+
+    .btn-navy {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 16px 36px;
+      background: var(--navy);
+      border: 1px solid var(--navy);
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .btn-navy:hover { background: var(--gold); border-color: var(--gold); }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      padding: 58px 60px 42px;
+      color: var(--white-dim);
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand .nav-logo-name { font-size: 19px; color: var(--pale); }
+    .footer-brand .nav-logo-rule { width: 210px; }
+
+    .footer-motto {
+      font-style: italic;
+      font-size: 14px;
+      color: var(--white-dim);
+      margin-top: 12px;
+      max-width: 320px;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--white-dim);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .footer-links a:hover { color: var(--gold-light); }
+
+    .footer-lang { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; }
+    .footer-lang a { color: var(--white-dim); text-decoration: none; }
+    .footer-lang a:hover { color: #FFFFFF; }
+    .footer-lang .active { color: var(--gold-light); }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 40px auto 0;
+      padding-top: 22px;
+      border-top: 1px solid var(--border-footer);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 12.5px;
+      color: rgba(243, 246, 250, 0.5);
+    }
+
+    .footer-credit a { color: rgba(243, 246, 250, 0.68); }
+    .footer-credit a:hover { color: var(--gold-light); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1020px) {
+      .programs-grid { grid-template-columns: repeat(2, 1fr); }
+      .where-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    @media (max-width: 760px) {
+      nav { padding: 14px 22px; }
+      .nav-links li:not(.nav-lang-item):not(.nav-cta-item) { display: none; }
+      #hero { padding: 150px 22px 90px; }
+      .container { padding: 0 22px; }
+      .steps-grid, .features-grid, .programs-grid, .where-grid, .contact-grid { grid-template-columns: 1fr; }
+      section { padding-left: 0; padding-right: 0; }
+      footer { padding: 46px 22px 36px; }
+      .footer-inner { flex-direction: column; }
+    }
+  
+    /* V3: PHOTOS, CARDS, ARTICLES, JOIN */
+    .photo-credit {
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: rgba(28, 43, 58, 0.55);
+      margin-top: 8px;
+    }
+    .photo-credit a { color: rgba(28, 43, 58, 0.62); }
+    .photo-credit a:hover { color: var(--gold); }
+    footer .photo-credit { color: rgba(243,246,250,0.55); }
+    footer .photo-credit a { color: rgba(243,246,250,0.68); }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+    }
+
+    a.card-link { text-decoration: none; color: inherit; display: block; }
+    a.card-link .feature-card, a.card-link .program-card, a.card-link .where-card { height: 100%; }
+    .card-more {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    a.card-link:hover .card-more { color: var(--navy); }
+
+    .about-photo { margin-bottom: 26px; box-shadow: var(--shadow); }
+    .about-photo img { width: 100%; display: block; }
+
+    /* ANALYSIS */
+    #analysis { padding: 130px 0; background: var(--pale); }
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .analysis-card {
+      background: #FFFFFF;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+    }
+    .analysis-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .analysis-body { padding: 30px 32px 34px; }
+    .analysis-date {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.24em;
+      text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 12px;
+    }
+    .analysis-card h3 { font-size: 23px; font-weight: 700; color: var(--navy); line-height: 1.3; margin-bottom: 10px; }
+    .analysis-card p { font-size: 15.5px; line-height: 1.8; color: var(--ink-dim); }
+    .analysis-card .photo-credit { padding: 0 32px; }
+
+    /* JOIN TEASER */
+    #join { padding: 130px 0; background: #FFFFFF; }
+    .join-teaser-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center;
+    }
+    .join-teaser-photo img { width: 100%; display: block; box-shadow: var(--shadow); }
+
+    /* SUBPAGE HERO + ARTICLE */
+    .page-hero {
+      padding: 190px 0 80px;
+      background: var(--pale);
+    }
+    .page-hero .section-title { margin-bottom: 16px; }
+    .article-meta {
+      font-size: 13px; letter-spacing: 0.08em; color: var(--ink-dim);
+      display: flex; gap: 22px; flex-wrap: wrap; margin-top: 10px;
+    }
+    .article-meta a { color: var(--gold); text-decoration: none; font-weight: 700; }
+    .article-meta a:hover { color: var(--navy); }
+    .article-wrap { max-width: 820px; margin: 0 auto; padding: 70px 60px 110px; }
+    .article-hero-img { width: 100%; display: block; box-shadow: var(--shadow); }
+    .article-wrap figure { margin-bottom: 42px; }
+    .article-body p {
+      font-size: 17.5px; line-height: 1.9; color: var(--ink-dim); margin-bottom: 24px;
+    }
+    .article-body p strong { color: var(--navy); }
+    .article-position {
+      border-left: 3px solid var(--gold);
+      padding: 6px 0 6px 28px;
+      margin: 38px 0;
+      font-size: 20px; font-style: italic; line-height: 1.6; color: var(--navy);
+    }
+    .article-question {
+      background: var(--pale); padding: 34px 36px; margin: 40px 0;
+    }
+    .article-question h3 {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.26em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .article-question p { font-size: 19px; line-height: 1.6; color: var(--navy); margin: 0; }
+    .article-source { font-size: 14.5px; color: var(--ink-dim); margin-top: 34px; }
+    .article-source a { color: var(--navy); }
+    .article-nav { margin-top: 56px; display: flex; gap: 18px; flex-wrap: wrap; }
+
+    /* JOIN PAGE */
+    .status-box {
+      background: #FFFFFF; border-left: 3px solid var(--gold);
+      padding: 30px 34px; box-shadow: var(--shadow); margin-top: 44px;
+    }
+    .status-box h3 { font-size: 20px; color: var(--navy); margin-bottom: 8px; }
+    .status-box p { color: var(--ink-dim); font-size: 16px; line-height: 1.8; }
+    .join-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px;
+    }
+    .join-card { background: var(--pale); padding: 38px 32px; box-shadow: var(--shadow); height: 100%; }
+    .join-card h3 { font-size: 21px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.3; }
+    .join-card p { font-size: 15.5px; line-height: 1.8; color: var(--ink-dim); }
+    .join-photo-band { padding: 0 0 130px; background: #FFFFFF; }
+    .join-photo-band img { width: 100%; max-height: 520px; object-fit: cover; display: block; }
+
+    @media (max-width: 1020px) {
+      .join-grid { grid-template-columns: 1fr; }
+      .join-teaser-grid { grid-template-columns: 1fr; gap: 44px; }
+    }
+    @media (max-width: 760px) {
+      .analysis-grid { grid-template-columns: 1fr; }
+      .article-wrap { padding: 54px 22px 80px; }
+      .page-hero { padding: 150px 0 60px; }
+    }
+
+  
+    /* V3: PHOTOS, CARDS, ARTICLES, JOIN */
+    .photo-credit {
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: rgba(28, 43, 58, 0.55);
+      margin-top: 8px;
+    }
+    .photo-credit a { color: rgba(28, 43, 58, 0.62); }
+    .photo-credit a:hover { color: var(--gold); }
+    footer .photo-credit { color: rgba(243,246,250,0.55); }
+    footer .photo-credit a { color: rgba(243,246,250,0.68); }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+    }
+
+    a.card-link { text-decoration: none; color: inherit; display: block; }
+    a.card-link .feature-card, a.card-link .program-card, a.card-link .where-card { height: 100%; }
+    .card-more {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    a.card-link:hover .card-more { color: var(--navy); }
+
+    .about-photo { margin-bottom: 26px; box-shadow: var(--shadow); }
+    .about-photo img { width: 100%; display: block; }
+
+    /* ANALYSIS */
+    #analysis { padding: 130px 0; background: var(--pale); }
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .analysis-card {
+      background: #FFFFFF;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+    }
+    .analysis-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .analysis-body { padding: 30px 32px 34px; }
+    .analysis-date {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.24em;
+      text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 12px;
+    }
+    .analysis-card h3 { font-size: 23px; font-weight: 700; color: var(--navy); line-height: 1.3; margin-bottom: 10px; }
+    .analysis-card p { font-size: 15.5px; line-height: 1.8; color: var(--ink-dim); }
+    .analysis-card .photo-credit { padding: 0 32px; }
+
+    /* JOIN TEASER */
+    #join { padding: 130px 0; background: #FFFFFF; }
+    .join-teaser-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center;
+    }
+    .join-teaser-photo img { width: 100%; display: block; box-shadow: var(--shadow); }
+
+    /* SUBPAGE HERO + ARTICLE */
+    .page-hero {
+      padding: 190px 0 80px;
+      background: var(--pale);
+    }
+    .page-hero .section-title { margin-bottom: 16px; }
+    .article-meta {
+      font-size: 13px; letter-spacing: 0.08em; color: var(--ink-dim);
+      display: flex; gap: 22px; flex-wrap: wrap; margin-top: 10px;
+    }
+    .article-meta a { color: var(--gold); text-decoration: none; font-weight: 700; }
+    .article-meta a:hover { color: var(--navy); }
+    .article-wrap { max-width: 820px; margin: 0 auto; padding: 70px 60px 110px; }
+    .article-hero-img { width: 100%; display: block; box-shadow: var(--shadow); }
+    .article-wrap figure { margin-bottom: 42px; }
+    .article-body p {
+      font-size: 17.5px; line-height: 1.9; color: var(--ink-dim); margin-bottom: 24px;
+    }
+    .article-body p strong { color: var(--navy); }
+    .article-position {
+      border-left: 3px solid var(--gold);
+      padding: 6px 0 6px 28px;
+      margin: 38px 0;
+      font-size: 20px; font-style: italic; line-height: 1.6; color: var(--navy);
+    }
+    .article-question {
+      background: var(--pale); padding: 34px 36px; margin: 40px 0;
+    }
+    .article-question h3 {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.26em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .article-question p { font-size: 19px; line-height: 1.6; color: var(--navy); margin: 0; }
+    .article-source { font-size: 14.5px; color: var(--ink-dim); margin-top: 34px; }
+    .article-source a { color: var(--navy); }
+    .article-nav { margin-top: 56px; display: flex; gap: 18px; flex-wrap: wrap; }
+
+    /* JOIN PAGE */
+    .status-box {
+      background: #FFFFFF; border-left: 3px solid var(--gold);
+      padding: 30px 34px; box-shadow: var(--shadow); margin-top: 44px;
+    }
+    .status-box h3 { font-size: 20px; color: var(--navy); margin-bottom: 8px; }
+    .status-box p { color: var(--ink-dim); font-size: 16px; line-height: 1.8; }
+    .join-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px;
+    }
+    .join-card { background: var(--pale); padding: 38px 32px; box-shadow: var(--shadow); height: 100%; }
+    .join-card h3 { font-size: 21px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.3; }
+    .join-card p { font-size: 15.5px; line-height: 1.8; color: var(--ink-dim); }
+    .join-photo-band { padding: 0 0 130px; background: #FFFFFF; }
+    .join-photo-band img { width: 100%; max-height: 520px; object-fit: cover; display: block; }
+
+    @media (max-width: 1020px) {
+      .join-grid { grid-template-columns: 1fr; }
+      .join-teaser-grid { grid-template-columns: 1fr; gap: 44px; }
+    }
+    @media (max-width: 760px) {
+      .analysis-grid { grid-template-columns: 1fr; }
+      .article-wrap { padding: 54px 22px 80px; }
+      .page-hero { padding: 150px 0 60px; }
+    }
+
+  </style>
+<style>
+.article-body h2 { font-size: 27px; font-weight: 700; color: var(--navy); line-height: 1.3; margin: 44px 0 16px; }
+.article-body h3 { font-size: 20px; font-weight: 700; color: var(--navy); line-height: 1.35; margin: 32px 0 12px; }
+.article-body ul, .article-body ol { margin: 0 0 24px 22px; }
+.article-body li { font-size: 17.5px; line-height: 1.85; color: var(--ink-dim); margin-bottom: 8px; }
+.article-body a { color: var(--navy); word-break: break-all; }
+.article-byline { font-size: 15px; color: var(--ink-dim); margin-top: 40px; border-top: 1px solid rgba(7,24,46,.12); padding-top: 22px; }
+</style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="../index-fr.html" aria-label="Peace and Security Bridges, accueil">
+      <span class="nav-logo-name">Peace and Security Bridges</span>
+      <span class="nav-logo-rule"></span>
+      <span class="nav-logo-sub">Fondée en 2015 · Kinshasa · Washington, DC</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index-fr.html#about">À Propos</a></li>
+      <li><a href="../index-fr.html#analysis">Analyses</a></li>
+      <li><a href="../index-fr.html#consultations">Consultations</a></li>
+      <li><a href="../index-fr.html#programs">Programmes</a></li>
+      <li><a href="../rejoindre.html">Nous Rejoindre</a></li>
+      <li><a href="../index-fr.html#contact">Contact</a></li>
+      <li class="nav-lang-item"><span class="nav-lang"><a href="../analysis/central-sahel-roads-front-line.html">EN</a> | <span class="active">FR</span></span></li>
+      <li class="nav-cta-item"><a class="nav-cta" href="../index-fr.html#partner">Devenir Partenaire</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="section-tag">Analyses &amp; Perspectives</p>
+      <h1 class="section-title" style="max-width:860px">Le Sahel central peut-il nourrir sa population quand les routes elles-mêmes sont devenues la ligne de front ?</h1>
+      <div class="article-meta">
+        <span>31 octobre 2026</span>
+        <span>Par Daniel Mwendanga, Analyste et chercheur en conflits, paix et sécurité</span>
+        <span>Sahel central</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-wrap">
+    <figure>
+      <img class="article-hero-img" src="../assets/analysis-sahel.jpg" alt="Des personnes déplacées à Barsalogho, Burkina Faso" loading="lazy"/>
+      <p class="photo-credit">Des personnes déplacées à Barsalogho, Burkina Faso. Photo&nbsp;: <a href="https://commons.wikimedia.org/wiki/File:Des_d%C3%A9plac%C3%A9s_peuls_sur_le_site_de_Barsalogho_au_petit_matin,_au_Burkina_Faso,_le_15_janvier_2019.png" target="_blank" rel="noopener">Lamine Traoré / VOA</a>, Domaine public, via Wikimedia Commons</p>
+    </figure>
+    <div class="article-body">
+<h2>1. Jugement d&#x27;ensemble</h2>
+<p>Le Sahel central ne fait plus face à une crise sécuritaire aux conséquences humanitaires. Il fait face à une catastrophe humanitaire qui est désormais le moteur de la crise sécuritaire. Près de quatre millions de personnes sont déracinées au Burkina Faso, au Mali et au Niger, la faim est déterminée par l&#x27;accès plutôt que par les seules récoltes, et les groupes armés ont appris qu&#x27;ils n&#x27;ont pas besoin de vaincre une armée s&#x27;ils peuvent étrangler une route, un marché ou un convoi de carburant. L&#x27;Alliance des États du Sahel (AES) avait promis souveraineté et sécurité. Ce que les citoyens peuvent mesurer aujourd&#x27;hui est différent : des écoles fermées, des villes assiégées, une aide qui se réduit et des champs auxquels on ne peut accéder en sécurité. À moins que l&#x27;accès, les moyens de subsistance et la confiance locale ne soient reconstruits ensemble, chaque période de soudure recrutera plus vite que n&#x27;importe quelle opération ne pourra dégager le terrain.</p>
+<h2>2. La catastrophe aujourd&#x27;hui</h2>
+<h3>Déplacements : une région en mouvement</h3>
+<p>Le HCR a rapporté le 9 octobre 2026 que près de 4 millions de personnes sont déracinées au Burkina Faso, au Mali et au Niger, dont plus de 818 000 réfugiés et demandeurs d&#x27;asile. L&#x27;agence a établi le total à 3,8 millions au 31 juillet 2026, soit environ le double du niveau d&#x27;octobre 2020, lorsque les trois pays comptaient plus de 1,7 million de personnes déplacées internes et 365 000 réfugiés. Le Burkina Faso porte la plus grande part des déplacements internes, et le mouvement ne s&#x27;arrête plus aux frontières des trois États. Le HCR recense près de 500 000 réfugiés et demandeurs d&#x27;asile burkinabè dans les pays voisins en 2026, contre plus de 300 000 à la fin de 2025, beaucoup d&#x27;entre eux se trouvant désormais dans les pays côtiers que sont le Bénin, la Côte d&#x27;Ivoire, le Ghana et le Togo. Plus de 334 000 Maliens sont réfugiés à l&#x27;étranger, et plus de 106 000 Nigériens sont recensés comme réfugiés dans les pays voisins.</p>
+<p>La structure de ces mouvements compte autant que le total. À Koro, dans la région malienne de Bandiagara, quelque 86 000 réfugiés burkinabè étaient arrivés en juillet 2026, parmi lesquels plus de 14 000 enfants et 6 000 femmes identifiées comme particulièrement exposées. Le HCR note que la population réfugiée y approche la taille de la communauté hôte, exerçant une pression sur des terres et une eau déjà rares. Quiconque a travaillé sur un corridor de déplacement sait ce que ce ratio signifie : la file d&#x27;attente au point d&#x27;eau devient un fait politique, et un différend sur un champ devient un test de la capacité de deux communautés à vivre encore côte à côte.</p>
+<h3>La faim : une crise d&#x27;accès sous les habits d&#x27;une crise alimentaire</h3>
+<p>Le PAM indique que 5,6 millions de personnes au Burkina Faso, au Mali et au Niger devaient, selon les projections, faire face à des niveaux de crise d&#x27;insécurité alimentaire pendant la période de soudure de juin à août 2026, avant même que la dernière escalade ne soit comptée. À l&#x27;échelle régionale, le PAM, citant l&#x27;analyse du Cadre Harmonisé, prévoyait que 55 millions de personnes en Afrique de l&#x27;Ouest et en Afrique centrale feraient face à des niveaux de crise de la faim ou pire au cours de la même période de soudure, dont plus de 3 millions en situation d&#x27;urgence (Phase 4), soit plus du double du chiffre de 2020. L&#x27;aperçu 2026 d&#x27;OCHA sur le Sahel, publié le 3 juin 2026, a compté 24,3 millions de personnes en besoin critique dans l&#x27;ensemble du Sahel.</p>
+<p>Les données maliennes montrent pourquoi il s&#x27;agit, au fond, d&#x27;un problème d&#x27;accès. Le PAM rapporte que les zones où les familles ont reçu des rations réduites ont connu une hausse de 64 pour cent de la faim aiguë (Phase 3 de l&#x27;IPC et au-delà) depuis 2023, tandis que les communautés qui ont reçu des rations complètes ont vu une baisse de 34 pour cent. Le même ménage, le même sol, les mêmes pluies : la variable était de savoir si la nourriture pouvait physiquement arriver. Une famille ne mange pas un chiffre national de récolte. Elle mange ce qui parvient à son marché, à un prix qu&#x27;elle peut payer, dans une semaine où la route était ouverte.</p>
+<h3>Les enfants : la malnutrition, et une génération hors de l&#x27;école</h3>
+<p>Le PAM prévoit que plus de 13 millions d&#x27;enfants en Afrique de l&#x27;Ouest et en Afrique centrale souffriront de malnutrition en 2026. Au Burkina Faso, l&#x27;appel 2026 de l&#x27;UNICEF pour l&#x27;action humanitaire en faveur des enfants recense, au début de 2026, 4,5 millions de personnes ayant besoin d&#x27;une assistance urgente, dont 2,9 millions d&#x27;enfants. OCHA rapporte que près de 12 900 écoles sont fermées en raison de l&#x27;insécurité à travers le Sahel, privant plus de 2,3 millions d&#x27;enfants d&#x27;éducation et les exposant à l&#x27;exploitation et au recrutement.</p>
+<p>Une école fermée n&#x27;est pas un service mis en pause. C&#x27;est une bifurcation dans la vie d&#x27;un enfant. Un garçon déscolarisé pendant deux ans revient rarement ; il part vers l&#x27;orpaillage artisanal, vers le gardiennage de troupeaux au loin, ou vers un groupe armé qui lui offre de la nourriture, une moto et un récit sur les raisons pour lesquelles il compte. Une fille déscolarisée fait face au mariage précoce présenté comme une protection. Chaque trimestre perdu est un fait de sécurité, pas seulement une statistique d&#x27;éducation.</p>
+<h3>Les femmes : porter le ménage, au risque le plus élevé</h3>
+<p>Les femmes déplacées font tourner l&#x27;économie quotidienne de cette crise : faire la queue pour l&#x27;eau, échanger ce qui reste, garder les enfants nourris quand les rations ne suffisent pas. Lors de son exposé devant le Conseil de sécurité des Nations unies en août 2025, la directrice exécutive d&#x27;ONU Femmes, Sima Bahous, a rapporté que plus d&#x27;un million de filles sont privées d&#x27;éducation à travers le Sahel, que dans le seul Burkina Faso les enlèvements de femmes et de filles avaient plus que doublé en 18 mois, et que deux tiers des femmes interrogées se sentent en insécurité sur les trajets de plus en plus longs pour l&#x27;eau et le bois de chauffage. Le même exposé a relevé un contrepoids : dans les zones frontalières du Mali et du Niger, la participation des femmes à la consolidation de la paix au niveau local est passée de 5 pour cent à 25 pour cent, contribuant à résoudre plus de 100 différends portant sur des ressources naturelles rares. Là où les femmes siègent dans la pièce quand se décident les points d&#x27;eau, les dates de pâturage et l&#x27;accès aux marchés, les différends se règlent avant de devenir des funérailles.</p>
+<h3>Les facteurs de sécurité : siège, blocus et une région fracturée</h3>
+<p>Jama&#x27;at Nusrat al Islam wal Muslimin (JNIM) et la Province de l&#x27;État islamique au Sahel sont en concurrence l&#x27;un avec l&#x27;autre autant qu&#x27;avec l&#x27;État, mais tous deux ont convergé vers la guerre économique : blocus de villes, taxation aux barrages, embuscades contre les convois de carburant et d&#x27;approvisionnement. Les villes assiégées du nord du Burkina Faso, Djibo étant la plus connue, survivent grâce à des convois escortés tandis que leurs populations gonflent de familles déplacées. Au Mali, le JNIM a imposé un blocus sur le carburant de la capitale à partir de septembre 2025, attaquant les convois de camions-citernes sur les corridors en provenance du Sénégal et de la Côte d&#x27;Ivoire.</p>
+<p>En avril 2026, la pression a atteint le centre de l&#x27;État malien. Reuters a rapporté le 30 avril 2026 que des attaques coordonnées menées par des insurgés liés à al-Qaïda et par une coalition de séparatistes majoritairement touareg avaient tué le ministre malien de la Défense, contraint les contractants russes à se retirer d&#x27;une ville stratégique et vu les séparatistes reprendre Kidal, prise par l&#x27;armée avec l&#x27;aide russe en 2023. Le JNIM a revendiqué la base de Hombori, affirmé tenir des barrages près de Bamako et menacé la capitale d&#x27;un siège complet, une menace rendue crédible par son précédent blocus sur le carburant. L&#x27;analyste principal d&#x27;ACLED pour l&#x27;Afrique de l&#x27;Ouest, Héni Nsaibia, a déclaré à Reuters qu&#x27;un blocus complet forcerait probablement l&#x27;armée malienne à donner la priorité à la capitale et à réduire celle accordée à d&#x27;autres zones.</p>
+<p>Sur le plan politique, la région a été réordonnée. Le Mali, le Burkina Faso et le Niger, tous sous régime militaire, ont formé l&#x27;AES, se sont retirés de la CEDEAO avec effet juridique au 29 janvier 2025, ont expulsé les forces françaises, ont mis fin à la mission de maintien de la paix des Nations unies au Mali et se sont tournés vers des partenaires russes, notamment le personnel d&#x27;Africa Corps. Le retrait des forces internationales a fait disparaître le soutien aérien, le renseignement et les capacités d&#x27;évacuation médicale qui n&#x27;ont pas été remplacés à la même échelle, quel que soit l&#x27;argument de souveraineté avancé pour y mettre fin. En juin 2026, les trois États ont également déposé des notifications de retrait de la Cour pénale internationale, réduisant les voies de la responsabilité pendant que le processus d&#x27;un an suit son cours. À la mi-octobre 2026, les informations pointaient dans deux directions à la fois : les ministres des Affaires étrangères de l&#x27;AES ont publiquement exclu de rejoindre la CEDEAO, tandis qu&#x27;une première réunion au niveau ministériel entre l&#x27;AES et la CEDEAO aurait convenu de groupes de travail conjoints sur la coopération future. L&#x27;espace entre ces déclarations est celui où la diplomatie régionale se relèvera ou échouera.</p>
+<h2>3. Le facteur plus profond derrière les gros titres</h2>
+<p>Le cadrage évident est une compétition entre juntes et djihadistes pour le territoire. Il n&#x27;est pas faux, mais ce n&#x27;est pas le facteur déterminant. Le facteur plus profond est l&#x27;effondrement des compromis locaux qui régissaient autrefois la terre, l&#x27;eau, les pâturages et la justice dans les campagnes de la zone des trois frontières. Les arrangements qui réglaient les dates de pâturage, les itinéraires des corridors et les indemnisations pour les dégâts aux cultures dépendaient de chefs, de fonctionnaires et de tribunaux dont l&#x27;autorité s&#x27;est amincie ou a été captée. Le stress climatique a réduit la marge d&#x27;erreur : le PNUD a averti le 15 septembre 2026 que l&#x27;épisode El Niño de 2026/2027 étend les zones exposées au risque de déficits pluviométriques, tout en relevant un réel désaccord entre les modèles de prévision pour l&#x27;Afrique de l&#x27;Ouest, et a souligné que le conflit, et non le climat, demeure le principal facteur des besoins, le climat agissant comme un multiplicateur de menaces sur la concurrence pour l&#x27;eau, les pâturages et les terres agricoles.</p>
+<p>Dans ce vide, les groupes armés s&#x27;insèrent comme collecteurs d&#x27;impôts, juges et recruteurs. Un jeune homme rallie rarement par théologie. Il rallie parce qu&#x27;un différend sur le champ de sa famille est resté sans réponse, parce qu&#x27;une opération de sécurité a humilié sa communauté, parce que le groupe le paie et le nourrit, ou parce que c&#x27;est la seule autorité qui se présente. Les opérations qui dégagent un village et le laissent sans gouvernance ne font que programmer le cycle de recrutement suivant. La contradiction est celle-ci : les États de l&#x27;AES définissent la crise comme un problème de souveraineté, alors que l&#x27;expérience quotidienne de leurs citoyens est une absence des fonctions souveraines de base dans une grande partie des campagnes : une route sûre, un différend qui obtient une audience, une école qui ouvre.</p>
+<h2>4. Le système humanitaire à l&#x27;épreuve</h2>
+<p>Le système d&#x27;aide est plus petit que la crise à laquelle il fait face. OCHA recense qu&#x27;en 2025, seuls 29 pour cent des financements requis pour le Sahel ont été reçus, le niveau le plus bas en une décennie. La réponse du HCR au Sahel n&#x27;était financée qu&#x27;à hauteur de 27 pour cent en septembre 2026, face à un besoin de 329,6 millions de dollars des États-Unis. Le PAM a besoin de 151 millions de dollars des États-Unis pour la réponse de crise dans les trois pays pour la seule période de septembre 2026 à février 2027. Une analyse de Sida a établi que le plan de réponse du Burkina Faso n&#x27;était financé qu&#x27;à 18 pour cent en août 2026.</p>
+<p>L&#x27;accès est aussi contraint que l&#x27;argent. La même analyse de Sida décrit un environnement opérationnel au Burkina Faso où une autorisation gouvernementale est requise pour chaque intervention, où les denrées et les médicaments classés sensibles doivent circuler dans des convois militaires escortés, rares, imprévisibles et coûteux, et où la distribution d&#x27;argent liquide est suspendue depuis 2024. Au Mali, le PAM s&#x27;appuie sur des modèles d&#x27;accès négocié et sur les vols de l&#x27;UNHAS. La négociation avec les autorités de fait, y compris les groupes armés qui contrôlent les routes, n&#x27;est plus une spécialité. C&#x27;est le système d&#x27;exploitation, avec de vrais dilemmes : les escortes peuvent compromettre la neutralité, et les paiements aux barrages peuvent alimenter l&#x27;économie de guerre. Mais ne servir que les populations qu&#x27;un gouvernement peut atteindre revient à abandonner précisément les communautés assiégées dont le traitement décidera si l&#x27;insurrection grandit. Une aide financée à 27 pour cent peut ralentir les morts. Elle ne peut pas inverser la crise. Cette inversion doit venir du travail sur les moyens de subsistance et la gouvernance locale décrit ci-dessous, financé comme une politique de sécurité, et non comme de la charité.</p>
+<h2>5. L&#x27;avenir : reconstruire les moyens de subsistance intercommunautaires</h2>
+<p>La reconstruction ne commencera pas par un communiqué de conférence. Elle commencera par un point d&#x27;eau que deux communautés gèrent ensemble sans se battre, un corridor que les troupeaux traversent à des dates convenues, et un jour de marché qui a lieu chaque semaine pendant un an. Le modèle existe en miniature : le HCR rapporte qu&#x27;à Koro, des coopératives réunissant des réfugiés burkinabè et des membres des communautés hôtes ont étendu les terres cultivées de 21 hectares en 2025 à 45 hectares en 2026, augmentant la production alimentaire et les revenus, avec un travail similaire à Kaya, au Burkina Faso. La tâche consiste à transformer ces poches en méthode.</p>
+<p><strong>Premièrement, des accords sur les ressources avant les projets.</strong> Dans chaque commune, les groupes d&#x27;agriculteurs et d&#x27;éleveurs, y compris les ménages déplacés et hôtes, devraient négocier des accords écrits sur les corridors de pâturage, les dates d&#x27;entrée et de sortie, les rotations aux points d&#x27;eau et l&#x27;indemnisation des dégâts aux cultures, attestés par les autorités traditionnelles et municipales. L&#x27;accord est le projet. Une infrastructure construite sans lui devient un nouveau prix à se disputer.</p>
+<p><strong>Deuxièmement, des biens partagés qui créent des intérêts partagés.</strong> Réhabiliter les points d&#x27;eau, les puits pastoraux, les petits barrages, les hangars de marché, les magasins de stockage et les pistes rurales comme des biens gérés conjointement, avec des comités issus des deux communautés et des ménages déplacés, et des fonds d&#x27;entretien alimentés par les contributions des usagers et un soutien apparié. Le PAM rapporte que la restauration des terres au Sahel a généré jusqu&#x27;à 30 dollars pour chaque dollar dépensé, et que les communautés ont réhabilité 300 000 hectares dans cinq pays depuis 2018. Les biens partagés transforment un argument à somme nulle sur une ressource fixe en intérêt conjoint pour une ressource plus grande.</p>
+<p><strong>Troisièmement, des coopératives et des chaînes de valeur conjointes.</strong> Des coopératives mixtes pour le mil, le sorgho, le niébé, l&#x27;embouche bovine, le lait, le cuir et la gomme arabique, avec un transport partagé et des prix transparents, donnent à d&#x27;anciens antagonistes une raison hebdomadaire de coopérer et une perte partagée si la violence revient. La priorité va aux chaînes de valeur qui emploient les jeunes hommes aux âges les plus exposés au recrutement, et au commerce avec les États côtiers, qui accueillent désormais des centaines de milliers de réfugiés burkinabè et ne peuvent être traités comme extérieurs au dossier sahélien.</p>
+<p><strong>Quatrièmement, les femmes et les jeunes au centre.</strong> Les groupes d&#x27;épargne des femmes, les associations de marché et des sièges avec droit de vote dans chaque comité de l&#x27;eau et de la terre devraient être des conditions de financement, et non des aspirations. Pour les jeunes, associer une scolarité de rattrapage à un travail rémunéré sur les biens partagés, afin qu&#x27;une paie et une salle de classe concurrencent l&#x27;offre du groupe armé dans la même semaine.</p>
+<p><strong>Cinquièmement, une médiation liée aux moyens de subsistance.</strong> Des comités de médiation attachés à chaque coopérative et à chaque bien partagé devraient traiter exactement les différends que le projet génère : violations des corridors, cultures endommagées, dettes impayées, parcelles contestées. Il leur faut des fonds d&#x27;indemnisation modestes et rapides, afin qu&#x27;un champ piétiné soit payé en quelques jours, et non débattu pendant une saison. Une justice qui arrive tard est un matériau de recrutement.</p>
+<p><strong>Séquencement.</strong> De 0 à 6 mois : protéger la vie et la saison suivante. Négocier l&#x27;accès sur les corridors prioritaires, prépositionner les approvisionnements avant que les routes ne se ferment, signer les premiers accords sur les ressources, lancer des travaux rémunérés en espèces sur les points d&#x27;eau et les pistes rurales. De 6 à 18 mois : restaurer la production. Développer les coopératives, reconstituer les troupeaux sur une base partagée, rouvrir les jours de marché dans des arrangements de sécurité convenus, redémarrer l&#x27;éducation de rattrapage, étendre les accords afin que les corridors se connectent. De 18 à 36 mois : consolider. Formaliser les accords dans des décisions municipales, confier l&#x27;entretien des biens à des comités aux fonds audités, relier les coopératives aux acheteurs, et faire passer les ménages de la dépendance aux rations vers la production, le commerce et une protection sociale ciblée.</p>
+<p><strong>Risques et lignes rouges.</strong> Ne pas construire de biens partagés là où une communauté est actuellement déplacée par l&#x27;autre sans un règlement préalable sur le retour et la terre ; cela fige la dépossession. Ne pas laisser les forces de sécurité choisir les membres des coopératives ou les responsables des comités. Ne pas payer de taxes de barrage non déclarées. Ne pas promettre de retours selon un calendrier politique ; le retour est un résultat de moyens de subsistance et d&#x27;une sécurité restaurés.</p>
+<p><strong>Indicateurs du retour de la confiance.</strong> Observer les comportements, pas les communiqués : des troupeaux traversant les corridors aux dates convenues sans escorte ; des jours de marché tenus à l&#x27;heure prévue pendant des mois consécutifs ; des demandes d&#x27;indemnisation pour dégâts aux cultures réglées en quelques semaines ; des femmes se rendant au marché et aux points d&#x27;eau sans la peur d&#x27;aujourd&#x27;hui ; des enfants déscolarisés entrant dans des classes de rattrapage ; des familles déplacées choisissant de cultiver dans les zones d&#x27;accueil plutôt que d&#x27;attendre une ration. Quand ces éléments bougeront, la carte sécuritaire suivra.</p>
+<h2>6. Ce qu&#x27;il faut surveiller dans les 90 prochains jours</h2>
+<ol><li><strong>Bamako et les corridors du carburant.</strong> Si le JNIM renouvelle la pression du blocus sur les convois de carburant en provenance du Sénégal et de la Côte d&#x27;Ivoire, et si l&#x27;armée malienne peut garder ces corridors ouverts sans dégarnir le centre et le nord.</li><li><strong>La trajectoire AES et CEDEAO.</strong> Si les groupes de travail conjoints rapportés se réunissent et produisent des termes sur la circulation et le commerce, ou si le refus de réintégrer se durcit en une rupture que les éleveurs et les commerçants paient à chaque frontière.</li><li><strong>L&#x27;évaluation post-récolte.</strong> Le prochain cycle du Cadre Harmonisé et la lecture finale de la récolte 2026 affectée par El Niño fixeront l&#x27;échelle de la période de soudure de juin à août 2027. Le PNUD note que les modèles de prévision sont en désaccord, donc l&#x27;évaluation, et non la prévision, est le document à surveiller.</li><li><strong>Les villes assiégées du Burkina Faso.</strong> Si le réapprovisionnement escorté de villes comme Djibo devient plus régulier, et si les civils sont libres de partir et de revenir. La fréquence des convois est l&#x27;indicateur public le plus honnête de la portée de l&#x27;État dans le nord et l&#x27;est.</li><li><strong>Le financement pour le début de 2027.</strong> Si le besoin de 151 millions de dollars du PAM et l&#x27;appel du HCR comblent leurs écarts, ou si les coupes dans les rations s&#x27;étendent aux mois précédant la période de soudure, lorsqu&#x27;elles causent le plus de dommages nutritionnels aux enfants.</li><li><strong>Le débordement côtier.</strong> Les arrivées de réfugiés burkinabè et les attaques frontalières dans le nord de la Côte d&#x27;Ivoire, du Ghana, du Togo et du Bénin. Si les États côtiers militarisent leur nord sans investissement dans les moyens de subsistance, la crise sahélienne aura exporté son modèle.</li><li><strong>Les réouvertures d&#x27;écoles.</strong> Combien d&#x27;écoles rouvrent et restent ouvertes cette année scolaire : l&#x27;indicateur le plus clair de la réalité des gains sécuritaires, assez réels pour qu&#x27;un parent envoie sa fille franchir le portail.</li></ol>
+<p>La population du Sahel central n&#x27;a pas épuisé sa résilience. Elle a épuisé sa marge. La marge peut être reconstruite : un corridor respecté, un marché rouvert, une ration livrée entière, un différend réglé en une semaine. C&#x27;est un travail sans éclat, mené commune par commune. C&#x27;est aussi le seul travail qui ait jamais mis fin à une crise comme celle-ci.</p>
+<h2>Sources</h2>
+<ul><li>OCHA, &quot;24 million people in the Sahel urgently need aid&quot; (2026 Humanitarian Needs and Response Overview for the Sahel), 3 juin 2026. <a href="https://www.unocha.org/publications/report/mali/24-million-people-sahel-urgently-need-aid-and-world-needs-do-more" target="_blank" rel="noopener">https://www.unocha.org/publications/report/mali/24-million-people-sahel-urgently-need-aid-and-world-needs-do-more</a></li><li>UNHCR, &quot;UNHCR calls for urgent investment as displacement crisis deepens across Central Sahel&quot;, 9 octobre 2026. <a href="https://www.unhcr.org/news/briefing-notes/unhcr-calls-urgent-investment-displacement-crisis-deepens-across-central-sahel" target="_blank" rel="noopener">https://www.unhcr.org/news/briefing-notes/unhcr-calls-urgent-investment-displacement-crisis-deepens-across-central-sahel</a></li><li>WFP, &quot;Central Sahel&quot; emergency page, consulté le 31 octobre 2026. <a href="https://www.wfp.org/emergencies/sahel-emergency" target="_blank" rel="noopener">https://www.wfp.org/emergencies/sahel-emergency</a></li><li>WFP, &quot;Humanitarian aid cuts push millions deeper into hunger amid rising violence and population displacement in West and Central Africa&quot;, janvier 2026. <a href="https://www.wfp.org/news/humanitarian-aid-cuts-push-millions-deeper-hunger-amid-rising-violence-and-population" target="_blank" rel="noopener">https://www.wfp.org/news/humanitarian-aid-cuts-push-millions-deeper-hunger-amid-rising-violence-and-population</a></li><li>UNDP, &quot;UNDP calls for urgent anticipatory investment as El Niño worsens an already conflict driven crisis in West and Central Africa&quot;, 15 septembre 2026. <a href="https://www.undp.org/africa/waca/press-releases/undp-calls-urgent-anticipatory-investment-el-nino-worsens-already-conflict-driven-crisis-west-and-central-africa" target="_blank" rel="noopener">https://www.undp.org/africa/waca/press-releases/undp-calls-urgent-anticipatory-investment-el-nino-worsens-already-conflict-driven-crisis-west-and-central-africa</a></li><li>Reuters, &quot;Kremlin says Russian forces will stay in Mali as insurgents press attacks&quot;, 30 avril 2026, via SRN News. <a href="https://srnnews.com/kremlin-says-russian-forces-will-stay-in-mali-as-insurgents-press-attacks/" target="_blank" rel="noopener">https://srnnews.com/kremlin-says-russian-forces-will-stay-in-mali-as-insurgents-press-attacks/</a></li><li>UN Women (Sima Bahous, Security Council briefing), via UN News, &quot;Erasure or empowerment? In Africa&#x27;s Sahel, women confront a stark choice&quot;, 7 août 2025. <a href="https://www.globalsecurity.org/military/library/news/2025/08/mil-250807-unnews05.htm" target="_blank" rel="noopener">https://www.globalsecurity.org/military/library/news/2025/08/mil-250807-unnews05.htm</a></li><li>UNICEF, &quot;Burkina Faso 2026 Humanitarian Action for Children Appeal&quot;, 2026.</li><li>Sida, &quot;Humanitarian Crisis Analysis 2026: Burkina Faso&quot;, 9 septembre 2026. <a href="https://cdn.sida.se/app/uploads/2026/09/25151113/Burkina-Faso-HCA-2026-September.pdf" target="_blank" rel="noopener">https://cdn.sida.se/app/uploads/2026/09/25151113/Burkina-Faso-HCA-2026-September.pdf</a></li><li>SAIIA, &quot;Security, Sovereignty and the Collapse of Multilateralism in the Sahel&quot;, Policy Insights 175, mai 2026. <a href="https://saiia.org.za/wp-content/uploads/2026/05/SAIIA_PI_175_SecuritySovereigntyCollapseSahel_.pdf" target="_blank" rel="noopener">https://saiia.org.za/wp-content/uploads/2026/05/SAIIA_PI_175_SecuritySovereigntyCollapseSahel_.pdf</a></li></ul>
+<p><strong>Notes de vérification et lacunes.</strong> Les totaux de personnes déplacées internes par pays pour 2026 n&#x27;ont pas pu être réconciliés à une date unique : l&#x27;exposé d&#x27;octobre 2026 du HCR donne le total régional qui fait autorité, tandis que les ventilations par pays publiées utilisent des dates et des systèmes de comptage différents, et les chiffres officiels burkinabè des personnes déplacées ainsi que les retours annoncés sont contestés. Ce rapport utilise donc le total régional ainsi que les chiffres sourcés de Koro et des pays côtiers, et non un chiffre de personnes déplacées internes de 2026 pour chaque pays. Aucun rapport de l&#x27;International Crisis Group portant une position d&#x27;octobre 2026 sur la rupture entre l&#x27;AES et la CEDEAO n&#x27;a été ouvert et lu ; le contact ministériel d&#x27;octobre rapporté repose sur des informations de presse régionale et devrait être confirmé au regard d&#x27;un communiqué de la CEDEAO ou de l&#x27;AES avant publication. Les données sur les femmes et la protection proviennent de l&#x27;exposé d&#x27;août 2025 d&#x27;ONU Femmes devant le Conseil de sécurité, la déclaration exhaustive la plus récente trouvée ; aucun ensemble de données équivalent d&#x27;octobre 2026 sur les violences basées sur le genre n&#x27;a été vérifié, et les violences basées sur le genre sont sous-déclarées dans les zones assiégées.</p>
+    </div>
+    <p class="article-byline">Par Daniel Mwendanga, Analyste et chercheur en conflits, paix et sécurité · Peace and Security Bridges · 31 octobre 2026. Également publié par SRM Grands Lacs et Afrique : <a href="https://srmgrandlakes.org/briefings/central-sahel-livelihoods-2026/index-fr.html">srmgrandlakes.org</a></p>
+    <div class="article-nav">
+      <a class="btn-outline" href="../index-fr.html#analysis">Toutes les analyses</a>
+      <a class="btn-primary" href="https://srmgrandlakes.org/briefings/central-sahel-livelihoods-2026/index-fr.html" target="_blank" rel="noopener">Lire sur SRM Grands Lacs</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo-name">Peace and Security Bridges</span>
+        <span class="nav-logo-rule"></span>
+        <p class="footer-motto">« Construire des ponts là où les murs ont trop longtemps persisté. »</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="../index-fr.html#about">À Propos</a></li>
+        <li><a href="../index-fr.html#analysis">Analyses</a></li>
+        <li><a href="../index-fr.html#consultations">Consultations</a></li>
+        <li><a href="../index-fr.html#programs">Programmes</a></li>
+        <li><a href="../index-fr.html#where">Où Nous Intervenons</a></li>
+        <li><a href="../rejoindre.html">Nous Rejoindre</a></li>
+        <li><a href="../index-fr.html#contact">Contact</a></li>
+        <li><a href="https://www.linkedin.com/company/peace-and-security-bridges/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="../privacy-fr.html">Confidentialité</a></li>
+      </ul>
+      <span class="footer-lang"><a href="../analysis/central-sahel-roads-front-line.html">EN</a> | <span class="active">FR</span></span>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Peace and Security Bridges · Fondée en 2015 · peaceandsecuritybridges.org</span>
+      <span class="footer-credit">Photo principale: <a href="https://commons.wikimedia.org/wiki/File:Boating_on_lake_Kivu.jpg" target="_blank" rel="noopener">&ldquo;Boating on Lake Kivu&rdquo; by Ludovic Hirlimann</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</span>
+    </div>
+  </footer>
+</body>
+</html>
