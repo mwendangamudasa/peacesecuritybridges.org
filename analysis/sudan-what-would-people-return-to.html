@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sudan: If the Guns Stopped Tomorrow, What Would People Return To? | Peace and Security Bridges</title>
+  <meta name="description" content="Sudan is no longer a war with a humanitarian crisis attached. With almost 34 million people in need, the question is not only how to stop the fighting, but what people would return to."/>
+  <style>
+    :root {
+      --navy: #07182E;
+      --navy-soft: #14304F;
+      --gold: #B08D3E;
+      --gold-light: #C9A227;
+      --pale: #F3F6FA;
+      --ink: #1C2B3A;
+      --ink-dim: rgba(28, 43, 58, 0.72);
+      --white-dim: rgba(243, 246, 250, 0.75);
+      --border-footer: rgba(243, 246, 250, 0.12);
+      --shadow: 0 4px 28px rgba(7, 24, 46, 0.06);
+      --shadow-hover: 0 10px 34px rgba(7, 24, 46, 0.10);
+      --font: 'Georgia', serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #FFFFFF;
+      color: var(--ink);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a, button { cursor: pointer; }
+
+    img { max-width: 100%; }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 16px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 1px 14px rgba(7, 24, 46, 0.05);
+    }
+
+    .nav-logo { text-decoration: none; display: block; }
+
+    .nav-logo-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      display: block;
+    }
+
+    .nav-logo-rule {
+      height: 2px;
+      background: var(--gold);
+      margin-top: 5px;
+      display: block;
+    }
+
+    .nav-logo-sub {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 5px;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--navy); }
+
+    .nav-lang { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: var(--ink-dim); }
+    .nav-lang a { color: var(--ink-dim); text-decoration: none; letter-spacing: 0.12em; }
+    .nav-lang a:hover { color: var(--navy); }
+    .nav-lang .active { color: var(--gold); }
+
+    .nav-cta {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-decoration: none;
+      padding: 10px 22px;
+      border: 1px solid var(--gold);
+      transition: all 0.3s;
+    }
+
+    .nav-cta:hover { background: var(--gold); color: #FFFFFF; }
+
+    /* HERO */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 190px 60px 130px;
+      overflow: hidden;
+      background: var(--pale);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/hero-lake-kivu.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(96deg, rgba(243,246,250,0.96) 0%, rgba(243,246,250,0.86) 44%, rgba(243,246,250,0.38) 78%, rgba(243,246,250,0.18) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 34px;
+      animation: fadeInUp 0.8s ease both;
+    }
+
+    .hero-tag::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-title {
+      font-size: clamp(44px, 6vw, 78px);
+      font-weight: 400;
+      line-height: 1.08;
+      color: var(--navy);
+      margin-bottom: 30px;
+      animation: fadeInUp 0.8s 0.1s ease both;
+    }
+
+    .hero-title em { font-style: italic; color: var(--gold); }
+
+    .hero-motto {
+      font-size: clamp(21px, 2.5vw, 28px);
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.45;
+      color: var(--navy-soft);
+      margin-bottom: 22px;
+      max-width: 640px;
+      animation: fadeInUp 0.8s 0.2s ease both;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--ink-dim);
+      margin-bottom: 48px;
+      max-width: 600px;
+      animation: fadeInUp 0.8s 0.25s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s 0.3s ease both;
+    }
+
+    .btn-primary {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 16px 36px;
+      background: var(--gold);
+      border: 1px solid var(--gold);
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(176, 141, 62, 0.30);
+    }
+
+    .btn-outline {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-decoration: none;
+      padding: 16px 36px;
+      background: transparent;
+      border: 1px solid var(--navy);
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover { background: var(--navy); color: #FFFFFF; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECTION BASE */
+    section { position: relative; }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 60px;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-tag::before {
+      content: '';
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-tag.center { justify-content: center; }
+    .section-tag.center::before { display: none; }
+
+    .section-title {
+      font-size: clamp(32px, 3.8vw, 50px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    .section-lead {
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--ink-dim);
+      max-width: 760px;
+    }
+
+    /* ABOUT */
+    #about {
+      padding: 130px 0;
+      background: #FFFFFF;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--ink-dim);
+      font-size: 17px;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .about-text p strong { color: var(--navy); }
+
+    .about-facts {
+      background: var(--pale);
+      padding: 40px 38px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-facts h3 {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .about-facts dl { display: grid; gap: 18px; }
+
+    .about-facts dt {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .about-facts dd {
+      font-size: 15px;
+      color: var(--ink);
+      margin-top: 2px;
+      line-height: 1.55;
+    }
+
+    /* HOW IT WORKS */
+    #how {
+      padding: 130px 0;
+      background: var(--pale);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 56px;
+      margin-top: 64px;
+    }
+
+    .step { padding-top: 6px; }
+
+    .step-num {
+      font-size: 54px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-size: 15.5px;
+      line-height: 1.8;
+      color: var(--ink-dim);
+    }
+
+    /* FEATURES */
+    #features {
+      padding: 130px 0;
+      background: #FFFFFF;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .feature-card {
+      background: var(--pale);
+      padding: 42px 40px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .feature-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      font-size: 15.5px;
+      line-height: 1.8;
+      color: var(--ink-dim);
+    }
+
+    /* CONSULTATIONS */
+    #consultations {
+      padding: 130px 0;
+      background: var(--pale);
+      text-align: center;
+    }
+
+    #consultations .section-lead {
+      margin: 0 auto;
+    }
+
+    #consultations .section-lead + .section-lead { margin-top: 18px; }
+
+    .consult-actions { margin-top: 46px; }
+
+    /* PROGRAMS */
+    #programs {
+      padding: 130px 0;
+      background: #FFFFFF;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 60px;
+    }
+
+    .program-card {
+      background: var(--pale);
+      padding: 36px 30px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .program-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .program-num {
+      font-size: 15px;
+      font-style: italic;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .program-card h3 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .program-card p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--ink-dim);
+    }
+
+    /* WHERE WE WORK */
+    #where {
+      padding: 130px 0;
+      background: var(--pale);
+    }
+
+    .where-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      margin-top: 60px;
+    }
+
+    .where-card {
+      background: #FFFFFF;
+      padding: 34px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .where-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .where-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--ink-dim);
+    }
+
+    /* PARTNER CTA */
+    #partner {
+      padding: 120px 0;
+      background: #FFFFFF;
+      text-align: center;
+    }
+
+    #partner p {
+      color: var(--ink-dim);
+      font-size: 17px;
+      line-height: 1.85;
+      max-width: 640px;
+      margin: 0 auto 42px;
+    }
+
+    /* CONTACT */
+    #contact {
+      padding: 130px 0;
+      background: var(--pale);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 60px;
+    }
+
+    .contact-card {
+      background: #FFFFFF;
+      padding: 36px 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h3 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .contact-card p {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--ink);
+    }
+
+    .contact-card a { color: var(--navy); }
+
+    .contact-actions { margin-top: 46px; }
+
+    .btn-navy {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 16px 36px;
+      background: var(--navy);
+      border: 1px solid var(--navy);
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .btn-navy:hover { background: var(--gold); border-color: var(--gold); }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      padding: 58px 60px 42px;
+      color: var(--white-dim);
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand .nav-logo-name { font-size: 19px; color: var(--pale); }
+    .footer-brand .nav-logo-rule { width: 210px; }
+
+    .footer-motto {
+      font-style: italic;
+      font-size: 14px;
+      color: var(--white-dim);
+      margin-top: 12px;
+      max-width: 320px;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--white-dim);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .footer-links a:hover { color: var(--gold-light); }
+
+    .footer-lang { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; }
+    .footer-lang a { color: var(--white-dim); text-decoration: none; }
+    .footer-lang a:hover { color: #FFFFFF; }
+    .footer-lang .active { color: var(--gold-light); }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 40px auto 0;
+      padding-top: 22px;
+      border-top: 1px solid var(--border-footer);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 12.5px;
+      color: rgba(243, 246, 250, 0.5);
+    }
+
+    .footer-credit a { color: rgba(243, 246, 250, 0.68); }
+    .footer-credit a:hover { color: var(--gold-light); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1020px) {
+      .programs-grid { grid-template-columns: repeat(2, 1fr); }
+      .where-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    @media (max-width: 760px) {
+      nav { padding: 14px 22px; }
+      .nav-links li:not(.nav-lang-item):not(.nav-cta-item) { display: none; }
+      #hero { padding: 150px 22px 90px; }
+      .container { padding: 0 22px; }
+      .steps-grid, .features-grid, .programs-grid, .where-grid, .contact-grid { grid-template-columns: 1fr; }
+      section { padding-left: 0; padding-right: 0; }
+      footer { padding: 46px 22px 36px; }
+      .footer-inner { flex-direction: column; }
+    }
+  
+    /* V3: PHOTOS, CARDS, ARTICLES, JOIN */
+    .photo-credit {
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: rgba(28, 43, 58, 0.55);
+      margin-top: 8px;
+    }
+    .photo-credit a { color: rgba(28, 43, 58, 0.62); }
+    .photo-credit a:hover { color: var(--gold); }
+    footer .photo-credit { color: rgba(243,246,250,0.55); }
+    footer .photo-credit a { color: rgba(243,246,250,0.68); }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+    }
+
+    a.card-link { text-decoration: none; color: inherit; display: block; }
+    a.card-link .feature-card, a.card-link .program-card, a.card-link .where-card { height: 100%; }
+    .card-more {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    a.card-link:hover .card-more { color: var(--navy); }
+
+    .about-photo { margin-bottom: 26px; box-shadow: var(--shadow); }
+    .about-photo img { width: 100%; display: block; }
+
+    /* ANALYSIS */
+    #analysis { padding: 130px 0; background: var(--pale); }
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .analysis-card {
+      background: #FFFFFF;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+    }
+    .analysis-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .analysis-body { padding: 30px 32px 34px; }
+    .analysis-date {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.24em;
+      text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 12px;
+    }
+    .analysis-card h3 { font-size: 23px; font-weight: 700; color: var(--navy); line-height: 1.3; margin-bottom: 10px; }
+    .analysis-card p { font-size: 15.5px; line-height: 1.8; color: var(--ink-dim); }
+    .analysis-card .photo-credit { padding: 0 32px; }
+
+    /* JOIN TEASER */
+    #join { padding: 130px 0; background: #FFFFFF; }
+    .join-teaser-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center;
+    }
+    .join-teaser-photo img { width: 100%; display: block; box-shadow: var(--shadow); }
+
+    /* SUBPAGE HERO + ARTICLE */
+    .page-hero {
+      padding: 190px 0 80px;
+      background: var(--pale);
+    }
+    .page-hero .section-title { margin-bottom: 16px; }
+    .article-meta {
+      font-size: 13px; letter-spacing: 0.08em; color: var(--ink-dim);
+      display: flex; gap: 22px; flex-wrap: wrap; margin-top: 10px;
+    }
+    .article-meta a { color: var(--gold); text-decoration: none; font-weight: 700; }
+    .article-meta a:hover { color: var(--navy); }
+    .article-wrap { max-width: 820px; margin: 0 auto; padding: 70px 60px 110px; }
+    .article-hero-img { width: 100%; display: block; box-shadow: var(--shadow); }
+    .article-wrap figure { margin-bottom: 42px; }
+    .article-body p {
+      font-size: 17.5px; line-height: 1.9; color: var(--ink-dim); margin-bottom: 24px;
+    }
+    .article-body p strong { color: var(--navy); }
+    .article-position {
+      border-left: 3px solid var(--gold);
+      padding: 6px 0 6px 28px;
+      margin: 38px 0;
+      font-size: 20px; font-style: italic; line-height: 1.6; color: var(--navy);
+    }
+    .article-question {
+      background: var(--pale); padding: 34px 36px; margin: 40px 0;
+    }
+    .article-question h3 {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.26em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .article-question p { font-size: 19px; line-height: 1.6; color: var(--navy); margin: 0; }
+    .article-source { font-size: 14.5px; color: var(--ink-dim); margin-top: 34px; }
+    .article-source a { color: var(--navy); }
+    .article-nav { margin-top: 56px; display: flex; gap: 18px; flex-wrap: wrap; }
+
+    /* JOIN PAGE */
+    .status-box {
+      background: #FFFFFF; border-left: 3px solid var(--gold);
+      padding: 30px 34px; box-shadow: var(--shadow); margin-top: 44px;
+    }
+    .status-box h3 { font-size: 20px; color: var(--navy); margin-bottom: 8px; }
+    .status-box p { color: var(--ink-dim); font-size: 16px; line-height: 1.8; }
+    .join-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px;
+    }
+    .join-card { background: var(--pale); padding: 38px 32px; box-shadow: var(--shadow); height: 100%; }
+    .join-card h3 { font-size: 21px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.3; }
+    .join-card p { font-size: 15.5px; line-height: 1.8; color: var(--ink-dim); }
+    .join-photo-band { padding: 0 0 130px; background: #FFFFFF; }
+    .join-photo-band img { width: 100%; max-height: 520px; object-fit: cover; display: block; }
+
+    @media (max-width: 1020px) {
+      .join-grid { grid-template-columns: 1fr; }
+      .join-teaser-grid { grid-template-columns: 1fr; gap: 44px; }
+    }
+    @media (max-width: 760px) {
+      .analysis-grid { grid-template-columns: 1fr; }
+      .article-wrap { padding: 54px 22px 80px; }
+      .page-hero { padding: 150px 0 60px; }
+    }
+
+  
+    /* V3: PHOTOS, CARDS, ARTICLES, JOIN */
+    .photo-credit {
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: rgba(28, 43, 58, 0.55);
+      margin-top: 8px;
+    }
+    .photo-credit a { color: rgba(28, 43, 58, 0.62); }
+    .photo-credit a:hover { color: var(--gold); }
+    footer .photo-credit { color: rgba(243,246,250,0.55); }
+    footer .photo-credit a { color: rgba(243,246,250,0.68); }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+    }
+
+    a.card-link { text-decoration: none; color: inherit; display: block; }
+    a.card-link .feature-card, a.card-link .program-card, a.card-link .where-card { height: 100%; }
+    .card-more {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    a.card-link:hover .card-more { color: var(--navy); }
+
+    .about-photo { margin-bottom: 26px; box-shadow: var(--shadow); }
+    .about-photo img { width: 100%; display: block; }
+
+    /* ANALYSIS */
+    #analysis { padding: 130px 0; background: var(--pale); }
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .analysis-card {
+      background: #FFFFFF;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+    }
+    .analysis-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .analysis-body { padding: 30px 32px 34px; }
+    .analysis-date {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.24em;
+      text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 12px;
+    }
+    .analysis-card h3 { font-size: 23px; font-weight: 700; color: var(--navy); line-height: 1.3; margin-bottom: 10px; }
+    .analysis-card p { font-size: 15.5px; line-height: 1.8; color: var(--ink-dim); }
+    .analysis-card .photo-credit { padding: 0 32px; }
+
+    /* JOIN TEASER */
+    #join { padding: 130px 0; background: #FFFFFF; }
+    .join-teaser-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center;
+    }
+    .join-teaser-photo img { width: 100%; display: block; box-shadow: var(--shadow); }
+
+    /* SUBPAGE HERO + ARTICLE */
+    .page-hero {
+      padding: 190px 0 80px;
+      background: var(--pale);
+    }
+    .page-hero .section-title { margin-bottom: 16px; }
+    .article-meta {
+      font-size: 13px; letter-spacing: 0.08em; color: var(--ink-dim);
+      display: flex; gap: 22px; flex-wrap: wrap; margin-top: 10px;
+    }
+    .article-meta a { color: var(--gold); text-decoration: none; font-weight: 700; }
+    .article-meta a:hover { color: var(--navy); }
+    .article-wrap { max-width: 820px; margin: 0 auto; padding: 70px 60px 110px; }
+    .article-hero-img { width: 100%; display: block; box-shadow: var(--shadow); }
+    .article-wrap figure { margin-bottom: 42px; }
+    .article-body p {
+      font-size: 17.5px; line-height: 1.9; color: var(--ink-dim); margin-bottom: 24px;
+    }
+    .article-body p strong { color: var(--navy); }
+    .article-position {
+      border-left: 3px solid var(--gold);
+      padding: 6px 0 6px 28px;
+      margin: 38px 0;
+      font-size: 20px; font-style: italic; line-height: 1.6; color: var(--navy);
+    }
+    .article-question {
+      background: var(--pale); padding: 34px 36px; margin: 40px 0;
+    }
+    .article-question h3 {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.26em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .article-question p { font-size: 19px; line-height: 1.6; color: var(--navy); margin: 0; }
+    .article-source { font-size: 14.5px; color: var(--ink-dim); margin-top: 34px; }
+    .article-source a { color: var(--navy); }
+    .article-nav { margin-top: 56px; display: flex; gap: 18px; flex-wrap: wrap; }
+
+    /* JOIN PAGE */
+    .status-box {
+      background: #FFFFFF; border-left: 3px solid var(--gold);
+      padding: 30px 34px; box-shadow: var(--shadow); margin-top: 44px;
+    }
+    .status-box h3 { font-size: 20px; color: var(--navy); margin-bottom: 8px; }
+    .status-box p { color: var(--ink-dim); font-size: 16px; line-height: 1.8; }
+    .join-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px;
+    }
+    .join-card { background: var(--pale); padding: 38px 32px; box-shadow: var(--shadow); height: 100%; }
+    .join-card h3 { font-size: 21px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.3; }
+    .join-card p { font-size: 15.5px; line-height: 1.8; color: var(--ink-dim); }
+    .join-photo-band { padding: 0 0 130px; background: #FFFFFF; }
+    .join-photo-band img { width: 100%; max-height: 520px; object-fit: cover; display: block; }
+
+    @media (max-width: 1020px) {
+      .join-grid { grid-template-columns: 1fr; }
+      .join-teaser-grid { grid-template-columns: 1fr; gap: 44px; }
+    }
+    @media (max-width: 760px) {
+      .analysis-grid { grid-template-columns: 1fr; }
+      .article-wrap { padding: 54px 22px 80px; }
+      .page-hero { padding: 150px 0 60px; }
+    }
+
+  </style>
+<style>
+.article-body h2 { font-size: 27px; font-weight: 700; color: var(--navy); line-height: 1.3; margin: 44px 0 16px; }
+.article-body h3 { font-size: 20px; font-weight: 700; color: var(--navy); line-height: 1.35; margin: 32px 0 12px; }
+.article-body ul, .article-body ol { margin: 0 0 24px 22px; }
+.article-body li { font-size: 17.5px; line-height: 1.85; color: var(--ink-dim); margin-bottom: 8px; }
+.article-body a { color: var(--navy); word-break: break-all; }
+.article-byline { font-size: 15px; color: var(--ink-dim); margin-top: 40px; border-top: 1px solid rgba(7,24,46,.12); padding-top: 22px; }
+</style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="../index.html" aria-label="Peace and Security Bridges, home">
+      <span class="nav-logo-name">Peace and Security Bridges</span>
+      <span class="nav-logo-rule"></span>
+      <span class="nav-logo-sub">Est. 2015 · Kinshasa · Washington, DC</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#analysis">Analysis</a></li>
+      <li><a href="../index.html#consultations">Consultations</a></li>
+      <li><a href="../index.html#programs">Programs</a></li>
+      <li><a href="../join-us.html">Join Us</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li class="nav-lang-item"><span class="nav-lang"><span class="active">EN</span> | <a href="../index-fr.html">FR</a></span></li>
+      <li class="nav-cta-item"><a class="nav-cta" href="../index.html#partner">Partner With Us</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="section-tag">Analysis &amp; Insights</p>
+      <h1 class="section-title" style="max-width:860px">Sudan: If the Guns Stopped Tomorrow, What Would People Return To?</h1>
+      <div class="article-meta">
+        <span>31 October 2026</span>
+        <span>By Daniel Mwendanga, Conflict, Peace &amp; Security Analyst and Researcher</span>
+        <span>Sudan</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-wrap">
+    <figure>
+      <img class="article-hero-img" src="../assets/where-sudan.jpg" alt="El Fasher, Darfur, seen from above" loading="lazy"/>
+      <p class="photo-credit">El Fasher, Darfur, seen from above. Photo&nbsp;: <a href="https://commons.wikimedia.org/wiki/File:Sudan_Envoy_-_Darfur_from_above.jpg" target="_blank" rel="noopener">Sudan Envoy</a>, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>, via Wikimedia Commons</p>
+    </figure>
+    <div class="article-body">
+<h2>1. Executive judgement</h2>
+<p>Sudan is no longer a war with a humanitarian crisis attached. It is a humanitarian catastrophe reshaping the country itself, while the war is locked in a divided stalemate. Almost 34 million people need humanitarian support, according to OCHA figures cited at the Geneva talks on 21 October 2026. Famine has been confirmed in besieged towns, hunger is rising again in Darfur and Kordofan, and more than 8.5 million people remain displaced even as 5.27 million have returned to places that often cannot sustain them. The central question is therefore not only how to stop the fighting. It is whether communities can rebuild shared livelihoods across the lines this war has cut through markets, grazing land and water points, or whether displacement hardens into permanent partition.</p>
+<h2>2. The catastrophe today</h2>
+<h3>Displacement, out and back at the same time</h3>
+<p>Sudan remains the world&#x27;s largest displacement crisis. IOM&#x27;s Displacement Tracking Matrix, in its 18 October 2026 Snapshot, recorded an estimated 8,585,611 internally displaced people across all 18 states, alongside 5,273,334 returnees across nine states. Around 56 per cent of the displaced and half of returnees are children under 18.</p>
+<p>Neighbouring countries host about 4.6 million refugees, asylum seekers and returnees from Sudan, according to the IFRC&#x27;s revised regional strategy of 25 October 2026. UNHCR told the UN Geneva press briefing on 23 October 2026 that nearly 100,000 people had fled from El Fasher to Chad since the city fell a year earlier, and almost one million had crossed into Chad since April 2023. UNHCR also cites Government of Egypt figures of 1.5 million Sudanese who fled to Egypt. Sudan itself still hosts about 910,000 refugees, most of them South Sudanese, and UNHCR reported 324,631 crossings from South Sudan into Sudan between April 2025 and October 2026.</p>
+<p>Returns have grown where fighting subsided, notably in Khartoum, Al Jazirah and Sennar. But return is a movement, not an outcome: OCHA&#x27;s 2026 plan records landmine and explosive contamination across farmland, homes and roads in return areas, with 91 per cent of people surveyed in Aj Jazirah reporting contamination concerns. Without restoration, return becomes a second displacement waiting for its trigger.</p>
+<h3>Hunger and famine: what is confirmed, and what is now at risk</h3>
+<p>Precision matters, because famine is a technical classification, not a headline. The IPC Famine Review Committee confirmed famine conditions, IPC Phase 5 with reasonable evidence, in El Fasher and Kadugli, in the IPC Special Snapshot covering the period to September 2025 and reported by FAO, WFP and UNICEF.</p>
+<p>The IPC&#x27;s subsequent national analysis, published in June 2026, found that nearly 19.5 million people, about 41 per cent of the population, faced high levels of acute food insecurity, IPC Phase 3 or above, between February and May 2026, including more than 5 million in IPC Phase 4, Emergency, and about 135,000 in IPC Phase 5, Catastrophe. It classified no area in famine for that period, identified 14 areas in Darfur and South Kordofan at risk of famine under a worst case scenario, and noted data gaps prevented a full lean season projection.</p>
+<p>The most recent signal is deterioration. On 12 October 2026, the IPC issued a Food Insecurity and Malnutrition Alert warning of a growing risk of famine across parts of Greater Darfur and Greater Kordofan, driven by conflict, mass displacement, severe drought and inadequate funding. An El Niño induced drought affecting roughly half the country is reducing food availability and driving up prices. Surveys in two South Darfur displacement camps recorded acute malnutrition at 38 per cent and 30.8 per cent, above the famine threshold. In Nyala, the share of children treated for severe acute malnutrition doubled from about 5 per cent to 11 per cent between January and August 2026. The Famine Review Committee said survey data remain insufficient for a full new analysis. Famine has been confirmed in specific besieged locations, not newly declared at national scale, and the October evidence points toward its return in the west if access and funding do not change.</p>
+<h3>Children: malnutrition, disease and a schooling collapse</h3>
+<p>The IPC estimates about 825,000 children under five are expected to suffer severe acute malnutrition in 2026, up 7 per cent on 2025 and 25 per cent above pre-conflict levels. UNICEF&#x27;s Situation Report No. 46, covering August 2026, records that UNICEF supported treatment of 51,506 children with severe acute malnutrition in that period and reached 751,400 people with cholera outbreak response.</p>
+<p>The education loss may prove the longest scar. UNICEF alerts cited at the Geneva talks on 21 October put the number of children out of school at eight million. In Darfur, Plan International reported on 26 October, citing UNICEF estimates, that 81 per cent of schools remain closed and 70 per cent of children are not attending classes. A child malnourished, displaced and out of school for a third consecutive year faces a changed life trajectory, and so does the country that will need her skills.</p>
+<h3>Women: holding households together under targeted risk</h3>
+<p>Women are the backbone of survival in displaced and besieged communities, and they are also being targeted. UNHCR&#x27;s chief, Barham Salih, warned in October 2026 that insufficient funding in Sudan threatens specialised care and support for more than 50,000 survivors of conflict related sexual violence. OCHA&#x27;s 2026 plan describes conflict related sexual violence in Sudan as rampant, including rape, gang rape, abduction, forced marriage and sexual slavery, used as a tactic to terrorise, often targeted along ethnicity or perceived affiliation.</p>
+<p>The daily geography of fear is measurable. UN Women, presenting a survey of 50 women&#x27;s organisations supporting people displaced from El Fasher on 23 October 2026, reported that 49 of the 50 had observed psychological distress among displaced women and girls, and nine in ten described unsafe living conditions. Citing IOM&#x27;s 2026 Multi Sectoral Needs Assessment, UN Women noted that among surveyed households in El Fasher, 84 per cent said women now avoid marketplaces, two thirds avoid collecting firewood, and half avoid social, community or religious spaces. When women cannot safely reach a market, a water point or a field, a household&#x27;s entire economy contracts. Maternal care has collapsed too: UN Women, citing the UN Fact Finding Mission, noted 80 per cent of hospitals in conflict affected areas were not functioning, contributing to increased maternal mortality. WHO counts 37 per cent of facilities nationwide no longer functioning by 2026, and has verified 228 attacks on health care since April 2023, causing 2,055 deaths. Different geographies, same system: one being dismantled.</p>
+<h3>Security drivers: a divided country and a drone war</h3>
+<p>The International Crisis Group, in its April 2026 briefing Divided Sudan, Elusive Peace, describes control divided between the army, which holds Khartoum, the central Nile corridor and the east including Port Sudan, and the RSF, which dominates most of Darfur with supply routes from Chad and Libya, with the main front lines in west central Kordofan. Both sides named rival governments in 2025, raising the risk of partition.</p>
+<p>El Fasher is the emblem. Captured by the RSF in October 2025 after a long siege, the city a year later holds fewer than 70,000 people against a pre-war population of more than one million, according to figures gathered by humanitarian organisations and published by Amnesty International on 23 October 2026. The UN Fact Finding Mission concluded in February 2026 that the RSF campaign there bore the hallmarks of genocide, and the UN Human Rights Office has estimated more than 6,000 people killed in just three days during the takeover, as reported by Human Rights Watch on 26 October 2026. The Mission&#x27;s October 2026 report on El Obeid describes a partially encircled city, expanding drone warfare, mass arrests and allegations of sexual violence against female detainees. OCHA&#x27;s October reporting records drone strikes on markets, health facilities and power substations across Darfur, Kordofan, Khartoum and the east, and the reported killing of 11 people including nine children in Bir Saliba, West Darfur. This is what access denial now looks like: not only checkpoints, but strikes on the infrastructure that makes civilian life and aid delivery possible.</p>
+<h2>3. The deeper driver beneath the headlines</h2>
+<p>The obvious framing is two generals and two armies. It is true, and it is insufficient. The deeper driver is that this war is financed, supplied and prolonged from outside and from below at the same time. The International Crisis Group assesses that foreign powers backing opposing sides have helped both the army and the RSF rebuff mediators in the belief that they can win by attrition, and that the backers are locked in an escalation cycle. The Fact Finding Mission&#x27;s September 2026 report, Fuelling Sudan&#x27;s Conflict, reaches a similar conclusion on external support networks. A war that pays its way, through gold, trade routes and external supply, does not end because its human cost becomes unbearable. Its costs are exported onto civilians while its revenues sustain the fighting.</p>
+<p>A second, quieter driver is internal. Control of land, grazing corridors, markets and local administration in Darfur and Kordofan has an ethnic and livelihood dimension that predates this war. Violence targeted along identity lines, from El Fasher to earlier attacks on camps such as Zamzam, is reshaping who can live where, who can farm, who can trade and who can return. A ceasefire alone will not restore the country. If the livelihood map is being redrawn by force, reconstruction must deliberately rebuild the conditions for coexistence, or it will rebuild over the fault lines.</p>
+<h2>4. The humanitarian system under strain</h2>
+<p>OCHA reported in late October 2026 that humanitarians reached more than 17 million people with at least one form of assistance in the first nine months of 2026, but only 3 million, 18 per cent of those reached, received multi sector assistance. Sudan&#x27;s 2026 Humanitarian Needs and Response Plan, which seeks nearly 2.9 billion dollars, was just over 46 per cent funded, with 1.33 billion dollars received, according to OCHA&#x27;s Humanitarian Action reporting. OCHA has warned that food and nutrition stocks risk running out by early next year. Underfunding at this level means ration cuts, closed facilities and triage between places that are all in emergency.</p>
+<p>Access is the other half of the strain. Convoys are delayed, denied and attacked, workers surveilled and detained, and local responders, as OCHA&#x27;s 2026 plan records, face attacks, detention and looting. Yet these responders have kept many communities alive. Refugees International&#x27;s 22 October 2026 report on the Sudan Humanitarian Fund notes that its Emergency Response Room and Mutual Aid Group programme grew from 15 million dollars in 2024 to 25 million dollars in 2025 and 2026, while only about 6 per cent of Fund financing went directly to Sudanese actors in 2025, rising to about 27 per cent counting subgrants. The local model works. It is still funded as an exception rather than as the backbone.</p>
+<h2>5. The future: reconstructing intercommunity livelihoods</h2>
+<p>Reconstruction will not begin with a national conference. It will begin where people who fled each other must share a market, a water point, a road or a grazing corridor again. The work should be sequenced and measured.</p>
+<p><strong>Shared assets first.</strong> The most practical unit of reconstruction is the asset no community can use alone: markets, water yards, boreholes, veterinary posts, feeder roads and river crossings, used by farmers and herders, displaced and resident, returnee and host alike. Rehabilitating them jointly, with committees drawn from every user community, turns scarcity from a trigger of conflict into a reason to cooperate. Where violence subsided and markets recovered in Khartoum, Al Jazirah and Sennar, food security improved measurably, as WFP&#x27;s famine analysis records.</p>
+<p><strong>Joint livelihood restoration.</strong> Seeds, tools, livestock restocking and cash for work should be designed across community lines from the start, not delivered to each group separately and labelled coexistence afterwards. Mixed producer groups, joint herder and farmer committees for corridor management, and shared savings groups create daily economic contact with rules attached. FAO&#x27;s position is the right starting point: seeds, tools and livestock are lifelines. The design question is who restores production together.</p>
+<p><strong>Women and youth at the centre.</strong> Programmes that route resources only through established male leadership will reproduce the exclusions this war has deepened. Women run much of the survival economy, and women&#x27;s organisations are among the most credible local responders, as UN Women&#x27;s October 2026 survey shows. They should hold defined shares of committee seats, grant finance and market infrastructure, including safe market spaces. Young people, including Emergency Response Room volunteers, are the country&#x27;s most experienced local response network. Reconstruction should employ that experience rather than bypass it.</p>
+<p><strong>Mediation tied to livelihoods.</strong> Land and resource disputes cannot be left to a separate, slower peace process while livelihood money flows around them. Every shared asset project should carry a local dispute mechanism: recognised community mediators, clear records of land and corridor agreements, and a route to escalate disputes before they turn violent. Explosive ordnance clearance is a precondition, given the contamination OCHA records in return areas.</p>
+<p><strong>Sequencing.</strong> In the first 0 to 6 months: protection and survival with a livelihood lens, meaning safe access, food and nutrition assistance, emergency seeds and livestock protection where planting windows allow, and no return programming that moves people faster than services and clearance can follow. From 6 to 18 months: shared assets and joint production, meaning market and water rehabilitation, corridor agreements before migration seasons, mixed cooperatives, and restored health and schooling. From 18 to 36 months: consolidation, meaning market systems, savings and credit, land documentation, and school reintegration for the eight million children out of class.</p>
+<p><strong>Risks and red lines.</strong> Three red lines should hold. No assistance conditioned on return to unsafe areas. No reconstruction finance routed in ways that reward armed actors for control of territory or taxation of aid. No intercommunity programme launched without a protection analysis showing it will not expose the weaker group to harm.</p>
+<p><strong>Indicators that trust is returning.</strong> Trust will not be announced. It will be visible: women returning to marketplaces they currently avoid, against the IOM measure that now records 84 per cent avoidance in El Fasher; shared committees meeting without external convening; herders and farmers using agreed corridors through a full migration season without armed escort; children returning to school across community lines; and local dispute mechanisms resolving land cases that are recorded and respected.</p>
+<h2>6. What to watch in the next 90 days</h2>
+<ol><li><strong>Kadugli and Dilling.</strong> Whether access opens or the siege deepens in South Kordofan, and whether survey teams can operate.</li><li><strong>El Obeid and the Kordofan front line.</strong> Whether the partial encirclement tightens, and whether drone strikes on markets and power continue at October&#x27;s tempo.</li><li><strong>The Chad border.</strong> Arrival rates at Adré and Tiné, and whether the flow into Chad accelerates again.</li><li><strong>The harvest and prices.</strong> Whether the drought hurt harvest eases prices after September&#x27;s sharp rise in WFP&#x27;s food basket, or the dry season drives the deterioration the IPC projects.</li><li><strong>Funding and stocks.</strong> Whether the response plan moves beyond 46 per cent funded, and whether OCHA&#x27;s warning that stocks could run out by early next year is answered.</li><li><strong>The Geneva mediation track.</strong> Whether the consultative process among mediators produces a humanitarian truce with access guarantees, or remains coordination among outsiders while the parties stay absent.</li><li><strong>Returns.</strong> Whether return figures keep rising into areas without services or clearance, or reverse into renewed displacement.</li></ol>
+<p>Sudan&#x27;s catastrophe is sometimes described as forgotten. In the field it feels unanswered. What is unanswered can still be answered: with access, with funding that reaches Sudanese responders first, with protection for the women and children carrying this war, and with reconstruction that rebuilds shared livelihoods deliberately, before mistrust hardens.</p>
+<h2>Sources</h2>
+<ul><li>OCHA, <em>Sudan Humanitarian Needs and Response Plan 2026</em>, April 2026. <a href="https://www.unocha.org/publications/report/sudan/sudan-humanitarian-needs-and-response-plan-2026-april-2026" target="_blank" rel="noopener">https://www.unocha.org/publications/report/sudan/sudan-humanitarian-needs-and-response-plan-2026-april-2026</a></li><li>OCHA / Humanitarian Action, <em>More funding urgently needed to meet growing needs</em>, October 2026. <a href="https://humanitarianaction.info/plan/1514/article/more-funding-urgently-needed-meet-growing-needs" target="_blank" rel="noopener">https://humanitarianaction.info/plan/1514/article/more-funding-urgently-needed-meet-growing-needs</a></li><li>UN News, <em>Sudan conflict: Peace efforts resume</em>, 21 October 2026. <a href="https://news.un.org/en/story/2026/10/1168638" target="_blank" rel="noopener">https://news.un.org/en/story/2026/10/1168638</a></li><li>IOM DTM, <em>Sudan Displacement and Return Snapshot, Update 10</em>, 18 October 2026. <a href="https://reliefweb.int/report/sudan/dtm-sudan-displacement-and-return-snapshot-update-10-18-october-2026" target="_blank" rel="noopener">https://reliefweb.int/report/sudan/dtm-sudan-displacement-and-return-snapshot-update-10-18-october-2026</a></li><li>IPC, <em>Sudan Acute Food Insecurity Analysis, February to May 2026</em>, June 2026. <a href="https://www.ipcinfo.org/ipc-country-analysis/details-map/en/c/1163315/?iso3=SDN" target="_blank" rel="noopener">https://www.ipcinfo.org/ipc-country-analysis/details-map/en/c/1163315/?iso3=SDN</a></li><li>IPC, <em>Sudan Acute Food Insecurity Analysis, September 2025</em>, November 2025. <a href="https://www.ipcinfo.org/ipc-country-analysis/details-map/en/c/1159787/" target="_blank" rel="noopener">https://www.ipcinfo.org/ipc-country-analysis/details-map/en/c/1159787/</a></li><li>FAO, WFP and UNICEF, <em>Famine conditions confirmed in Sudan&#x27;s El Fasher and Kadugli</em>, WFP news release. <a href="https://www.wfp.org/news/famine-conditions-confirmed-sudans-el-fasher-and-kadugli-hunger-and-malnutrition-ease-where" target="_blank" rel="noopener">https://www.wfp.org/news/famine-conditions-confirmed-sudans-el-fasher-and-kadugli-hunger-and-malnutrition-ease-where</a></li><li>WHO, <em>IPC Sudan Food Insecurity and Malnutrition Alert</em>, 12 October 2026. <a href="https://www.who.int/news/item/12-10-2026-ipc-sudan-food-insecurity-and-malnutrition-alert" target="_blank" rel="noopener">https://www.who.int/news/item/12-10-2026-ipc-sudan-food-insecurity-and-malnutrition-alert</a></li><li>UNICEF, <em>Sudan Humanitarian Situation Report No. 46</em>, 29 October 2026. <a href="https://reliefweb.int/report/sudan/unicef-sudan-humanitarian-situation-report-no-46-1-31-august-2026" target="_blank" rel="noopener">https://reliefweb.int/report/sudan/unicef-sudan-humanitarian-situation-report-no-46-1-31-august-2026</a></li><li>UN Information Service, <em>UN Geneva Press Briefing</em>, 23 October 2026. <a href="https://www.unognewsroom.org/story/en/3307/un-geneva-press-briefing-23-october-2026" target="_blank" rel="noopener">https://www.unognewsroom.org/story/en/3307/un-geneva-press-briefing-23-october-2026</a></li><li>UN News via The European Sting, <em>UNHCR chief warns protection is buckling under cuts</em>, 13 October 2026. <a href="https://europeansting.com/2026/10/13/efficiency-has-limits-unhcr-chief-warns-refugee-protection-is-buckling-under-cuts/" target="_blank" rel="noopener">https://europeansting.com/2026/10/13/efficiency-has-limits-unhcr-chief-warns-refugee-protection-is-buckling-under-cuts/</a></li><li>International Crisis Group, <em>Divided Sudan, Elusive Peace</em>, Briefing No. 211, April 2026. <a href="https://www.crisisgroup.org/brf/africa/sudan-egypt-saudi-arabia-united-arab-emirates-united-states/b211-divided-sudan-elusive-peace" target="_blank" rel="noopener">https://www.crisisgroup.org/brf/africa/sudan-egypt-saudi-arabia-united-arab-emirates-united-states/b211-divided-sudan-elusive-peace</a></li><li>Amnesty International, <em>El Fasher one year after RSF capture</em>, 23 October 2026. <a href="https://www.amnesty.org.uk/latest/sudan-everybody-is-terrorised-unlawful-killings-detention-starvation-and-torture-in-el-fasher-one-year-after-rsf-capture/" target="_blank" rel="noopener">https://www.amnesty.org.uk/latest/sudan-everybody-is-terrorised-unlawful-killings-detention-starvation-and-torture-in-el-fasher-one-year-after-rsf-capture/</a></li><li>Human Rights Watch, <em>Sudan: One Year on from the Cataclysm of El Fasher</em>, 26 October 2026. <a href="https://www.hrw.org/news/2026/10/26/sudan-one-year-on-from-the-cataclysm-of-el-fasher" target="_blank" rel="noopener">https://www.hrw.org/news/2026/10/26/sudan-one-year-on-from-the-cataclysm-of-el-fasher</a></li><li>IFRC, <em>Sudan Crisis: Revised Operational Strategy No. 2</em>, October 2026. <a href="https://reliefweb.int/report/sudan/sudan-crisis-cross-regional-population-movement-emergency-appeal-no-mdrs1001-revised-operational-strategy-2" target="_blank" rel="noopener">https://reliefweb.int/report/sudan/sudan-crisis-cross-regional-population-movement-emergency-appeal-no-mdrs1001-revised-operational-strategy-2</a></li><li>UNHCR reporting via Addis Standard, <em>Over 324,000 cross from South Sudan into Sudan</em>, 17 October 2026. <a href="https://addisstandard.com/brief/n-60363/" target="_blank" rel="noopener">https://addisstandard.com/brief/n-60363/</a></li><li>Refugees International, <em>The Sudan Humanitarian Fund: A Pooled Fund in Transition</em>, 22 October 2026. <a href="https://www.refugeesinternational.org/reports-briefs/the-sudan-humanitarian-fund-a-pooled-fund-in-transition/" target="_blank" rel="noopener">https://www.refugeesinternational.org/reports-briefs/the-sudan-humanitarian-fund-a-pooled-fund-in-transition/</a></li><li>Plan International, <em>One year after the fall of El Fasher</em>, October 2026. <a href="https://plan-international.org/news/2026/10/26/one-year-after-the-fall-of-el-fasher-a-generations-dreams-remain-on-hold/" target="_blank" rel="noopener">https://plan-international.org/news/2026/10/26/one-year-after-the-fall-of-el-fasher-a-generations-dreams-remain-on-hold/</a></li></ul>
+<p><strong>Verification gaps.</strong> The Famine Review Committee stated in October 2026 that survey data are insufficient for a full new famine analysis, and no nationwide IPC projection was produced for the June to September 2026 lean season, so this report claims no current famine confirmation beyond the El Fasher and Kadugli classification to September 2025. No verified current figure for Sudanese flows into Ethiopia was found in the sources consulted. No verified national total of survivors of conflict related sexual violence exists; the figure used is UNHCR&#x27;s count of survivors whose services are at risk, not a prevalence estimate.</p>
+    </div>
+    <p class="article-byline">By Daniel Mwendanga, Conflict, Peace &amp; Security Analyst and Researcher · Peace and Security Bridges · 31 October 2026. Also published by SRM Grand Lakes &amp; Africa: <a href="https://srmgrandlakes.org/briefings/sudan-return-livelihoods-2026/">srmgrandlakes.org</a></p>
+    <div class="article-nav">
+      <a class="btn-outline" href="../index.html#analysis">All Analysis</a>
+      <a class="btn-primary" href="https://srmgrandlakes.org/briefings/sudan-return-livelihoods-2026/" target="_blank" rel="noopener">Read on SRM Grand Lakes</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo-name">Peace and Security Bridges</span>
+        <span class="nav-logo-rule"></span>
+        <p class="footer-motto">&ldquo;Building bridges where walls have stood too long.&rdquo;</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#analysis">Analysis</a></li>
+        <li><a href="../index.html#consultations">Consultations</a></li>
+        <li><a href="../index.html#programs">Programs</a></li>
+        <li><a href="../index.html#where">Where We Work</a></li>
+        <li><a href="../join-us.html">Join Us</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="https://www.linkedin.com/company/peace-and-security-bridges/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+      </ul>
+      <span class="footer-lang"><span class="active">EN</span> | <a href="../index-fr.html">FR</a></span>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Peace and Security Bridges · Founded 2015 · peaceandsecuritybridges.org</span>
+      <span class="footer-credit">Hero photo: <a href="https://commons.wikimedia.org/wiki/File:Boating_on_lake_Kivu.jpg" target="_blank" rel="noopener">&ldquo;Boating on Lake Kivu&rdquo; by Ludovic Hirlimann</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</span>
+    </div>
+  </footer>
+</body>
+</html>
